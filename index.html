@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mari I Poll</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/9763e3f958.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEGyavMZmxzEehn6rTiVtJFLiLgLhAhsE&callback=initMap&libraries=&v=weekly" defer></script>
+</head>
+<body>
+ 
+    <div class="mip">
+        <p class="mip__logo--ham">Mari i Poll</p>
+        <nav class="mip__nav">
+            <div class="mip__logo">
+                <img src="img/mip-logo.png" alt="">
+            </div>
+            <p class="mip__name">Mari i Poll</p>
+            <div class="mip__links">
+                <ul>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#mip-about-us">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mip__hamburger">
+            <div id="menu">
+                <p class="mip__name--ham">Mari i Poll</p>
+                <div class="mip__links--ham">
+                    <ul>
+                        <li><a class="hum-link" href="#" onclick="closeMenu()">Каталог</a></li>
+                        <li><a class="hum-link" href="#mip-about-us" onclick="closeMenu()">О нас</a></li>
+                        <li><a class="hum-link" href="#contact" onclick="closeMenu()">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button class="humburger humburger-line">
+                <span>Menu</span>
+            </button>
+            <div class="container">
+                
+            </div>
+        </div>
+        <section class="mip__main">
+            <div class="mip__protect">
+                <div class="mip__protect-item mip__protect-item--l">
+                    <div>Игрушки с натуральным наполнением</div>
+                    <div><i class="fas fa-building"></i></div>
+                </div>
+                <div class="mip__protect-item mip__protect-item--r">
+                    <div>Производство в Мариуполе</div>
+                    <div><i class="fas fa-globe-europe"></i></div>
+                </div>
+            </div>
+        </section>
+        <section class="mip__gallery container" id="mip-about-us">
+            <h2>Наши работы</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+                  <div class="swiper-slide"><img class="swiper-img" src="img/0Q3B4377.JPG" alt=""></div>
+                  <div class="swiper-slide"><img class="swiper-img" src="img/119861341_images_13903626070.jpg" alt=""></div>
+                  <div class="swiper-slide"><img class="swiper-img" src="img/119861443_images_13903628086.jpg" alt=""></div>
+                  <div class="swiper-slide"><img class="swiper-img" src="img/119861341_images_13903626070.jpg" alt=""></div>
+                  ...
+                </div>
+                <div class="swiper-pagination"></div>
+              
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2 class="contact__h2">Контакты</h2>
+            <div class="contact__form">
+                <form class="contact__input">
+                    <input type="text" name="text" placeholder="Ваше имя">
+                    <input type="tel" name="tel" placeholder="Ваш телефон">
+                    <textarea rows="9" placeholder="Дополнительно"></textarea>
+                    <button class="contact__btn" type="button">Заказать звонок</button>
+                </form>
+                <div class="contact__info">
+                    <h2 class="contact__info-h2">Наш телефон :</h2>
+                    <p class="contact__info-p">+012 345 6789</p>
+                    <h2 class="contact__info-h2">Наш адресс :</h2>
+                    <p class="contact__info-p">улица Гастелло, 69а, Мариуполь, Донецькая область, 87500</p>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>

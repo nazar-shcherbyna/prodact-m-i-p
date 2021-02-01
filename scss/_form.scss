@@ -1,0 +1,75 @@
+@import 'variables';
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.form {
+    color: #482A1F;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 80%;
+    &__h {
+        color: #482A1F;
+        font-size: 2.5rem;
+        text-align: center;
+        border: 1px solid #C3A566;
+        max-width: 60%;
+        margin: 40px auto 30px;
+        padding: 15px 7px;
+        text-transform: uppercase;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            width: 50px;
+            border-top: 1px solid #C3A566;
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 50%;
+        }
+        &::before {
+            left: -60px;
+        }
+        &::after {
+            right: -60px;
+        }
+    }
+    &__input {
+        display: block;
+        margin: 20px auto;
+        width: 65%;
+        border-radius: 5px;
+        border: 1px solid rgba(72, 42, 31, 0.8);
+        font-size: 1.8rem;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form {
+        width: 80%;
+        &__h {
+            color: #482A1F;
+            font-size: 2.5rem;
+            text-align: center;
+            border: 1px solid #C3A566;
+            max-width: 60%;
+            margin: 40px auto 30px;
+            padding: 15px 7px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        &__input {
+            width: 80%;
+        }
+    }
+}
