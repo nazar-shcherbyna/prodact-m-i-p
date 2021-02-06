@@ -1,0 +1,114 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    padding: 0 30px;
+    background-color: #1b1b1b;
+    @media screen and (max-width: 992px) {
+        display: block;
+        text-align: center;
+    }
+    @media screen and (max-width: 576px) {
+        padding: 0 20px;
+    }
+    &__info {
+        padding: 30px;
+        @media screen and (max-width: 992px) {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 768px) {
+            padding: 15px;
+            display: flex;
+        }
+        @media screen and (max-width: 576px) {
+            display: block;
+        }
+    }
+    &__protect {
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin: 5px 0;
+    }
+    &__founder {
+        @media screen and (max-width: 992px) {
+            padding: 20px 10px;
+        }
+        @media screen and (max-width: 576px) {
+            padding: 10px 0 20px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #cea19b;
+            font-size: 1.6rem;
+            font-weight: 700;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #CEA19B;
+                transition: all .3s ease;
+            }
+
+            &:hover::after {
+                transition: all .3s ease;
+                background-color: gold;
+            }
+            &:hover {
+                color: gold;
+            }
+        }
+    }
+    &__links {
+        @media screen and (max-width: 992px) {
+            padding: 20px;
+        }
+        @media screen and (max-width: 576px) {
+            padding: 0;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin: 10px 20px;
+        @media screen and (max-width: 768px) {
+            margin: 10px;
+        }
+        @media screen and (max-width: 576px) {
+            display: block;
+            margin: 0 0 20px 0;
+        }
+        &:hover {
+            color: #cea19b;
+        }
+    }
+    &__social {
+        a {
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 992px) {
+            padding: 20px;
+        }
+    }
+}
+
+.fa-instagram, .fa-facebook-square {
+    font-size: 4rem;
+    color: #fff;
+    transition: all .3s ease;
+    &:hover, &:focus, &:active {
+        transform: scale(1.1);
+        transition: all .3s ease;
+        color: #cea19b;
+    }
+}

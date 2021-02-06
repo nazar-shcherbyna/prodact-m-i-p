@@ -1,0 +1,131 @@
+.contact {
+    background-color: #86ffcf;
+    color: #006cc4;
+    min-height: 100vh;
+    margin-top: 50px;
+    padding: 0 30px;
+    &__h2 {
+        // padding: 50px 0 10px;
+        @media screen and (max-width: 768px) {
+            font-size: 3.6rem;
+            padding: 30px 0 10px;
+        }
+        @media screen and (max-width: 576px) {
+            padding: 15px 0 10px;
+        }
+    }
+    &__form {
+        display: flex;
+        margin: 40px 0 0;
+        padding: 10px 0;
+        @media screen and (max-width: 768px) {
+            display: block;
+            margin: 20px 0 0;
+        }
+        @media screen and (max-width: 576px) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__input {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        @media screen and (max-width: 768px) {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    &__btn {
+        color: inherit;
+        background-color: #fff;
+        border: none;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 3px rgba(0, 108, 196, 0.8);
+        }
+        &:focus, &:active {
+            border: none;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 108, 196, 0.8);
+        }
+    }
+}
+
+
+.contact__input input, 
+.contact__input textarea {
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color: #006cc4;
+    background-color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 15px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 10px;
+        font-size: 1.4;
+        padding: 12px;
+    }
+}
+
+.contact__input input::placeholder,
+.contact__input textarea::placeholder {
+    color: rgba(0, 108, 196, 0.4);
+}
+
+.contact__input input:active::placeholder,
+.contact__input input:focus::placeholder,
+.contact__input textarea:active::placeholder,
+.contact__input textarea:focus::placeholder {
+    color: rgba(0, 108, 196, 1);
+}
+
+.contact__input input:active,
+.contact__input input:focus,
+.contact__input textarea:active, 
+.contact__input textarea:focus {
+    opacity: 1;
+    font-weight: 400;
+    border-left: 5px solid #355b82;
+}
+
+.contact__info {
+    width: 50%;
+    margin-left: 4rem;
+    @media screen and (max-width: 968px) {
+        margin-left: 5rem;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 20px auto;
+    }
+    @media screen and (max-width: 576px) {
+        margin: 0 auto;
+    }
+}
+
+.contact__info-h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.contact__info-p {
+    color: rgb(1, 25, 92);
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 5px 0 20px;
+    margin: 0;
+    @media screen and (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+}

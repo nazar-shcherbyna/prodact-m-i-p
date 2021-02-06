@@ -1,0 +1,157 @@
+.hamburger {
+    transition: all 1s ease;
+    width: 100%;
+    @media screen and (min-width:769px) {
+        display: none;
+    }
+    &__h3 {
+        text-align: center;
+        font-size: 6rem;
+        color: rgb(255, 255, 255);
+        
+    }
+    &__links {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 30px 20px;
+            width: 100%;
+            text-align: center;
+        }
+        a {
+            color: #fff;
+            font-size: 5rem;
+            text-decoration: none;   
+            font-weight: 400;
+            text-shadow: 0 0 1px rgba(21, 127, 197, 0.8);
+        }
+    }
+    &__btn {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 50;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 80px;
+        height: 80px;
+        font-size: 0;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+    }
+    &__menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: #8b5487;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+        transform: translate(-100%, 0);
+        transition: all 1s ease;
+        z-index: 7;
+        &:focus, &:active {
+            transition: all 1s ease;
+            transform: translate(0,0);
+        }
+    }
+    &__menu.nav-active {
+        transition: all 1s ease;
+        transform: translate(0,0);
+    }
+}
+
+
+.hamburger__btn:focus {
+    outline: none;
+}
+
+.hamburger__btn span {
+    display: block;
+    position: absolute;
+    top: 37px;
+    left: 14px;
+    right: 14px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.hamburger__btn span::before, 
+.hamburger__btn span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.hamburger__btn span::before {
+    top: -20px;
+}
+
+.hamburger__btn span::after {
+    bottom: -20px;
+}
+
+.hamburger-line {
+    background-color: transparent;
+}
+
+.hamburger-line span,
+.hamburger-line span::before, 
+.hamburger-line span::after {
+    transition-duration: .3s, .3s;
+    transition-delay: .3s, 0s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger-line span::before {
+    transition-property: top, transform;
+}
+
+.hamburger-line span::after {
+    transition-property: bottom, transform;
+}
+
+.hamburger-line.is-active span {
+    box-shadow: none;
+    transition: box-shadow .1s ease;
+    background: none;
+}
+
+.hamburger-line.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger-line.is-active span::before, 
+.hamburger-line.is-active span::after {
+    transition-delay: 0s, .3s;
+}
+
+
+.body-active {
+    transition: all 1s ease;
+}
+
+
+.ham-close {
+    transform: translate(-100%, 0);
+}
