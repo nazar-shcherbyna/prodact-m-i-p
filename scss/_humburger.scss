@@ -8,7 +8,9 @@
         text-align: center;
         font-size: 6rem;
         color: rgb(255, 255, 255);
-        
+        @media screen and (max-width:576px) {
+            font-size: 4rem;
+        }
     }
     &__links {
         ul {
@@ -20,6 +22,9 @@
             margin: 30px 20px;
             width: 100%;
             text-align: center;
+            @media screen and (max-width:576px) {
+                margin: 50px 0;
+            }
         }
         a {
             color: #fff;
@@ -27,6 +32,9 @@
             text-decoration: none;   
             font-weight: 400;
             text-shadow: 0 0 1px rgba(21, 127, 197, 0.8);
+            @media screen and (max-width:576px) {
+                font-size: 3.5rem;
+            }
         }
     }
     &__btn {
