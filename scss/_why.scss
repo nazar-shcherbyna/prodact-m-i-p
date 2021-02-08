@@ -124,10 +124,16 @@
     font-size: 5rem;
     font-weight: 700;
     opacity: .7;
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
 }
 
 .swiper-pagination-bullet {
     background-color: #000;
     width: 10px;
     height: 10px;
+    @media screen and (max-width: 576px) {
+        background-color: #fff;
+    }
 }
