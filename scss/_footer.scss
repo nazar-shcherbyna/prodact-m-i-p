@@ -80,13 +80,14 @@
         color: #fff;
         font-size: 1.6rem;
         font-weight: 200;
-        margin: 10px 20px;
+        margin: 10px 30px;
+        width: max-content;
         @media screen and (max-width: 768px) {
-            margin: 10px;
+            margin: 10px 20px;
         }
         @media screen and (max-width: 576px) {
             display: block;
-            margin: 0 0 20px 0;
+            margin: 10px auto;
         }
         &:hover {
             color: #cea19b;
