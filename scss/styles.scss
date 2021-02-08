@@ -129,6 +129,10 @@ h1 {
         display: flex;
         h2 {
             margin: 0;
+            @media screen and (max-width: 576px) {
+                bottom: -300px;
+                font-size: 1.2rem;
+            }
         }
         @media screen and (max-width: 992px) {
             display: block;
@@ -136,6 +140,7 @@ h1 {
         }
         @media screen and (max-width: 576px) {
             bottom: -300px;
+            font-size: 2rem;
         }
     }
     &__protect-item {
@@ -170,6 +175,9 @@ h1 {
             font-size: 7rem;
             @media screen and (max-width: 1200px) {
                 font-size: 6rem;
+            }
+            @media screen and (max-width: 576px) {
+                font-size: 4rem;
             }
         }
     }
@@ -208,45 +216,8 @@ h1 {
     }
 }
 
-.mip {
-    &__name {
-        font-family: 'Pacifico', cursive;
-        font-size: 2.5rem;
-        padding: 0;
-        margin: 10px 0;
-        color: #fff;
-        opacity: 0;
-        text-shadow: 0 0 1px rgba(21, 127, 197, 0.753);
-    }   
-    // &__logo--ham {
-    //     display: none;
-    //     font-family: 'Pacifico', cursive;
-    //     font-size: 2.5rem;
-    //     color: rgb(21, 127, 197);
-    //     @media screen and (max-width: 768px) {
-    //         display: block;
-    //         position: fixed;
-    //         z-index: 7;
-    //         text-align: center;
-    //         width: 100%;
-    //         top: 0;
-    //         color: #fff;
-    //         margin: 10px;
-    //         opacity: 0;
-    //     }
-    // }
-    
-}
-
 .show {
     opacity: 1;
-}
-
-.fas {
-    display: block;
-    font-size: 5rem;
-    padding: 5px;
-    color: #fff;
 }
 
 .about-us {

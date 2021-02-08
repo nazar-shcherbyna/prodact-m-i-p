@@ -97,6 +97,8 @@
 .swiper-container {
     background-color: #fff;
     padding-top: 150px;
+    position: relative;
+    max-width: 100%;
     @media screen and (max-width: 992px) {
         padding-top: 100px;
     }
@@ -114,4 +116,18 @@
         object-fit: cover;
         object-position: center;
     }
+}
+
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+    color: #000;
+    font-size: 5rem;
+    font-weight: 700;
+    opacity: .7;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
 }
