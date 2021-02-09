@@ -232,11 +232,27 @@ h1 {
     }
 }
 
-.show {
-    opacity: 1;
-}
-
 #map {
     height: 100vh;
     width: 100%;
+}
+
+.link-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    z-index: 15;
+    opacity: 0;
+}
+
+.fa-arrow-circle-up {
+    font-size: 5rem;
+    color: gold;
+}
+
+.show {
+    opacity: 1;
 }

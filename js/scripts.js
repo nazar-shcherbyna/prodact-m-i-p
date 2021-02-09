@@ -1,22 +1,16 @@
 const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
+  
     loop: true,
   
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
   
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
   });
 
 let map;
@@ -98,3 +92,8 @@ showName(mipName, mipLittleName);
 //     mipHumName.classList.remove('show');
 //   }
 // })
+
+let elemLinkUp = document.querySelector('.why__h2')
+let linkUp = document.querySelector('.link-up')
+
+showName(elemLinkUp, linkUp);
