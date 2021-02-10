@@ -88,22 +88,6 @@ h1 {
         li {
             margin: 10px 20px;
             position: relative;
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: -5px;
-                width: 100%;
-                height: 2px;
-                background-color: #fff;
-                transform: scaleX(0);
-                transform-origin: center right, center left ;
-                transition: transform 0.3s;
-            }
-            &:hover::after {
-                transform: scaleX(1);
-                transform-origin: center right, center left ;
-            }
         }
         a {
             // font-family: 'Pacifico', cursive;
@@ -112,6 +96,22 @@ h1 {
             font-weight: 300;
             text-shadow: 0 0 1px rgba(21, 127, 197, 0.8);
         }
+    }
+    &__link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transform: scaleX(0);
+        transform-origin: center right, center left ;
+        transition: transform 0.3s;
+    }
+    &__link:hover::after {
+        transform: scaleX(1);
+        transform-origin: center right, center left ;
     }
     &__content {
         padding: 200px 30px;
@@ -239,13 +239,17 @@ h1 {
 
 .link-up {
     position: fixed;
-    bottom: 50px;
+    bottom: 100px;
     right: 50px;
     background-color: transparent;
     width: 50px;
     height: 50px;
     z-index: 15;
     opacity: 0;
+    @media screen and (max-width: 576px) {
+        bottom: 30px;
+        right: 30px;
+    }
 }
 
 .fa-arrow-circle-up {
@@ -255,4 +259,79 @@ h1 {
 
 .show {
     opacity: 1;
+}
+
+.fa-phone {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(193, 255, 123);
+    line-height: 1;
+    transition: all .3s ease;
+    &:hover {
+        color: rgb(190, 221, 50);
+        transition: all .3s ease;
+        transform: rotate(-45deg);
+    }
+}
+
+h5 {
+    margin: 20px 0;
+}
+.form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: #fff;
+    width: 70%;
+    @media screen and (max-width: 576px) {
+        width: 100%;
+    }
+    &__title{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+    &__label {
+        margin: 15px 0;
+        font-size: 2rem;
+    }
+    &__control {
+        outline: none;
+        background: #FFFFFF;
+        box-shadow: inset 0 0 0 100px #fff;
+        border-radius: 5px;
+        border: 1px solid #DDE0E6;
+        box-sizing: border-box;
+        color: #484c53;
+        font-size: 15px;
+        padding: 15px 20px;
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        &:focus{
+            border-color:#9d9fa3;
+
+        }
+    }
+    &__btn{
+        text-transform: uppercase;
+        font-size: 2rem;
+        width: 100%;
+        height: 56px;
+        margin: 22px auto;
+        transition: all .3s ease-in;
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+
+}
+#callback{
+    fill: #000;
+    margin: 30px;
+}
+
+.hystmodal__window{
+    border-radius: 5px;
+    padding: 30px 30px;
 }

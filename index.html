@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hystmodal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEGyavMZmxzEehn6rTiVtJFLiLgLhAhsE&callback=initMap&libraries=&v=weekly" defer></script>
@@ -37,9 +38,10 @@
                 <p class="header__little-h">Mari i Poll</p>
                 <div class="header__links">
                     <ul>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#mip-about-us">О нас</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a class="header__link" href="#">Каталог</a></li>
+                        <li><a class="header__link" href="#mip-about-us">О нас</a></li>
+                        <li><a class="header__link" href="#contact">Контакты</a></li>
+                        <li><a href="#myModal" data-hystmodal="#myModal" class="modal-open"><i class="fas fa-phone"></i></a></li>
                     </ul>
                 </div>
             </nav>
@@ -66,6 +68,7 @@
                         <li><a class="ham-link" href="#" onclick="closeMenu()">Каталог</a></li>
                         <li><a class="ham-link" href="#mip-about-us" onclick="closeMenu()">О нас</a></li>
                         <li><a class="ham-link" href="#contact" onclick="closeMenu()">Контакты</a></li>
+                        <li><a href="#myModal" data-hystmodal="#myModal" class="modal-open">Заказать звонок</a></li>
                     </ul>
                 </div>
             </div>
@@ -74,8 +77,6 @@
             </button>
         </div>
     </header>
-
-    <a href="#header" class="link-up"><i class="fas fa-arrow-circle-up"></i></a>
 
     <section class="why">
         <h2 class="why__h2">Почему выбирают фабрику “Мари и Поль”</h2>
@@ -117,9 +118,9 @@
 
     <section class="about-us" id="about-us">
         <div class="container">
-            <h2 class="h2">Мы это</h2>
+            <h2 class="h2 about-us__animate">Мы это</h2>
             <div class="about-us__items">
-                <div class="about-us__item">
+                <div class="about-us__item about-us__items--l">
                     <div class="about-us__icon">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M51.3053 54.5756C51.1202 54.5356 50.9304 54.5283 50.743 54.5564C48.8648 54.3377 47.448 52.7487 47.4448 50.8585C47.4448 49.9527 46.7104 49.2182 45.8045 49.2182C44.8987 49.2182 44.1642 49.9527 44.1642 50.8585C44.169 54.015 46.2803 56.7797 49.3238 57.6151V59.2554C49.3238 60.1612 50.0582 60.8957 50.9641 60.8957C51.8699 60.8957 52.6044 60.1612 52.6044 59.2554V57.7144C56.1172 56.9792 58.5048 53.7074 58.1355 50.1377C57.7655 46.568 54.758 43.8553 51.1691 43.8545C49.1123 43.8545 47.4448 42.1869 47.4448 40.1302C47.4448 38.0734 49.1123 36.4059 51.1691 36.4059C53.2259 36.4059 54.8934 38.0734 54.8934 40.1302C54.8934 41.036 55.6278 41.7705 56.5337 41.7705C57.4395 41.7705 58.174 41.036 58.174 40.1302C58.1692 36.8159 55.8473 33.9575 52.6044 33.2735V31.7805C52.6044 30.8747 51.8699 30.1403 50.9641 30.1403C50.0582 30.1403 49.3238 30.8747 49.3238 31.7805V33.3736C45.9391 34.2978 43.7606 37.584 44.2267 41.0616C44.6928 44.5392 47.6603 47.135 51.1691 47.1342C53.1986 47.1342 54.8541 48.7593 54.891 50.788C54.9286 52.8168 53.3332 54.5019 51.3053 54.5756Z" fill="black"/>
@@ -133,7 +134,7 @@
                     <h3>Оптимальное соотношением цены и качества игрушек</h3>
                     <p>Магазины «Детский мир» всегда славились оптимальным соотношением цены и качества предлагаемых товаров. Что касается интернет-магазина, то цены на многие товары здесь ниже, чем в розничных магазинах сети.</p>
                 </div>
-                <div class="about-us__item">
+                <div class="about-us__item about-us__items--r">
                     <div class="about-us__icon">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -147,7 +148,7 @@
                     <h3>Оптимальное соотношением цены и качества игрушек</h3>
                     <p>Наши операторы умеют не только принимать и оформлять заказы — если вы еще не определились с покупкой или сомневаетесь в своем выборе, они проконсультируют вас и помогут выбрать оптимально подходящий товар.</p>
                 </div>
-                <div class="about-us__item">
+                <div class="about-us__item about-us__items--l">
                     <div class="about-us__icon">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -160,7 +161,7 @@
                     <h3>Оптимальное соотношением цены и качества игрушек</h3>
                     <p>Магазины «Детский мир» всегда славились оптимальным соотношением цены и качества предлагаемых товаров. Что касается интернет-магазина, то цены на многие товары здесь ниже, чем в розничных магазинах сети.</p>
                 </div>
-                <div class="about-us__item">
+                <div class="about-us__item about-us__items--r">
                     <div class="about-us__icon">
                         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M98.3307 75.306H95.5102V24.583C95.5214 21.9618 94.4866 19.4443 92.6363 17.5884C90.7852 15.7317 88.2709 14.6898 85.6497 14.6938H73.6735V8.37684C73.6775 7.71278 73.2765 7.11408 72.6618 6.86376C72.0472 6.61345 71.3425 6.76172 70.8809 7.23924L67.6379 10.5787L64.3933 7.23924C64.0856 6.92196 63.6631 6.74339 63.2223 6.74339C62.7814 6.74339 62.3589 6.92196 62.0512 7.23924L58.8114 10.5779L55.5732 7.23526C55.2663 6.91718 54.8438 6.73621 54.4021 6.73462C53.9597 6.73621 53.5372 6.91638 53.2302 7.23446L49.9904 10.5755L46.7514 7.23845C46.4437 6.92196 46.0212 6.74259 45.5796 6.74259C45.1379 6.74259 44.7154 6.92196 44.4077 7.23845L41.1695 10.5763L37.9305 7.23924C37.6228 6.92276 37.2003 6.74339 36.7586 6.74339C36.317 6.74339 35.8945 6.92276 35.5867 7.23924L32.3509 10.5763L29.1167 7.24004C28.6559 6.76252 27.9512 6.61345 27.3366 6.86376C26.7227 7.11408 26.3225 7.71278 26.3265 8.37684V14.6938H14.3503C11.7291 14.6898 9.21476 15.7317 7.36368 17.5884C5.51339 19.4443 4.47864 21.9618 4.4898 24.583V75.306H1.66932C0.758929 75.306 0.0167411 76.0355 0 76.9459V83.3266C0.0231186 88.8169 4.47624 93.2573 9.96732 93.2652H90.0327C95.5238 93.2573 99.9769 88.8169 100 83.3266V76.9459C99.9833 76.0355 99.2411 75.306 98.3307 75.306ZM85.6497 17.9591C87.4051 17.9543 89.0896 18.6519 90.3284 19.8963C91.5673 21.1399 92.2569 22.8276 92.2449 24.583V75.306H87.3469V25.0613C87.3557 24.6372 87.1915 24.2274 86.8917 23.9277C86.592 23.6272 86.183 23.4613 85.7589 23.4693H73.6735V17.9591H85.6497ZM26.3265 59.1836H21.8216C20.92 59.1836 20.1889 59.9146 20.1889 60.8162C20.1889 61.7179 20.92 62.4489 21.8216 62.4489H78.1784C79.08 62.4489 79.8111 61.7179 79.8111 60.8162C79.8111 59.9146 79.08 59.1836 78.1784 59.1836H73.6735V26.7346H84.0816V75.306H62.1732C61.7164 75.3076 61.2811 75.4998 60.9726 75.837L59.2881 77.6562C58.0238 79.021 56.2476 79.7966 54.3878 79.7958H45.6122C43.7516 79.7974 41.9754 79.0218 40.7111 77.657L39.0274 75.8314C38.7181 75.4958 38.2828 75.306 37.8269 75.306H15.9184V26.7346H26.3265V59.1836ZM29.5918 12.4067L31.1854 14.0258C31.4955 14.3343 31.9173 14.5017 32.3541 14.4897H32.3525C32.7894 14.5017 33.2127 14.3343 33.5236 14.0266L36.7594 10.7054L39.9976 14.0505C40.3037 14.3693 40.7262 14.5495 41.1679 14.5503C41.6095 14.5519 42.0328 14.3733 42.3414 14.0568L45.5796 10.7198L48.8186 14.0584C49.1255 14.3749 49.5488 14.5543 49.9896 14.5543C50.4313 14.5543 50.8538 14.3757 51.1615 14.0592L54.4013 10.7214L57.6387 14.0273C57.9496 14.3351 58.3729 14.5017 58.8106 14.4897C59.2475 14.5017 59.6708 14.3343 59.9817 14.0266L63.2247 10.7038L66.4692 14.0505C66.7762 14.3678 67.1987 14.5479 67.6403 14.5495C68.0788 14.5503 68.4989 14.3725 68.8034 14.0568L70.4082 12.4003V59.1836H29.5918V12.4067ZM7.7551 24.583C7.74314 22.8276 8.43272 21.1399 9.67156 19.8963C10.9104 18.6519 12.5949 17.9543 14.3503 17.9591H26.3265V23.4693H14.2411C13.817 23.4613 13.408 23.6272 13.1083 23.9277C12.8085 24.2274 12.6443 24.6372 12.6531 25.0613V75.306H7.7551V24.583ZM96.7347 83.3266C96.714 87.0144 93.7213 89.9943 90.0327 89.9999H9.96732C6.2787 89.9943 3.28603 87.0144 3.26531 83.3266V78.5714H37.1118L38.3107 79.8668C40.1937 81.902 42.8396 83.0596 45.6122 83.0611H54.3878C57.1604 83.0603 59.8071 81.902 61.6893 79.8668L62.8882 78.5714H96.7347V83.3266Z" fill="black"/>
@@ -176,24 +177,6 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
-        <h2 class="contact__h2">Контакты</h2>
-        <div class="contact__form">
-            <form class="contact__input">
-                <input type="text" name="text" placeholder="Ваше имя">
-                <input type="tel" name="tel" placeholder="Ваш телефон">
-                <textarea rows="9" placeholder="Дополнительно"></textarea>
-                <button class="contact__btn" type="button">Заказать звонок</button>
-            </form>
-            <div class="contact__info">
-                <h2 class="contact__info-h2">Телефон :</h2>
-                <p class="contact__info-p animate__animated animate__fadeInDown">+380683911805</p>
-                <p class="contact__info-p animate__animated animate__fadeInDown">+380509932742</p>
-                <h2 class="contact__info-h2">Адресс :</h2>
-                <p class="contact__info-p animate__animated animate__fadeInDown">улица Гастелло, 69а, Мариуполь, Донецькая область, 87500</p>
-            </div>
-        </div>
-    </section>
     <div id="map"></div>
 
     <footer class="footer">
@@ -218,6 +201,53 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/hystmodal.min.js"></script>
+
+    <a href="#header" class="link-up"><i class="fas fa-arrow-circle-up"></i></a>
+    <!-- <a href="#header" class="link-up"><i class="fas fa-arrow-circle-up"></i></a>
+
+    <section class="contact" id="contact">
+        <h2 class="contact__h2">Контакты</h2>
+        <div class="contact__form">
+            <form class="contact__input">
+                <input type="text" name="text" placeholder="Ваше имя">
+                <input type="tel" name="tel" placeholder="Ваш телефон">
+                <textarea rows="9" placeholder="Дополнительно"></textarea>
+                <button class="contact__btn" type="button">Заказать звонок</button>
+            </form>
+            <div class="contact__info">
+                <h2 class="contact__info-h2">Телефон :</h2>
+                <p class="contact__info-p animate__animated animate__fadeInDown">+380683911805</p>
+                <p class="contact__info-p animate__animated animate__fadeInDown">+380509932742</p>
+                <h2 class="contact__info-h2">Адресс :</h2>
+                <p class="contact__info-p animate__animated animate__fadeInDown">улица Гастелло, 69а, Мариуполь, Донецькая область, 87500</p>
+            </div>
+        </div>
+    </section> -->
+
+    <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>  
+                <div class="bgs">
+                    
+                    <form class="form">
+                        <h5 class="form__title" id="exampleModalLabel">Перезвонить мне</h5>
+                        <label for="recipientName" class="form__label">Ваше имя:</label>
+                        <input type="text" class="form__control" required placeholder="Введите Ваше имя" id="recipientName">
+                        <label for="recipientPhone" class="form__label">Ваш телефон:</label>
+                        <input  name="recipientPhone" type="tel" class="form__control" required placeholder="Введите Ваш телефон" id="recipientPhone">
+                        <label for="messageText" class="form__label">Дополнительная информация:</label>
+                        <textarea class="form__control" id="messageText"></textarea>
+       
+                        <button id="btnsend" type="button" class="form__btn" onmouseup="sentInTelegram()">Перезвоните мне</button>
+                    </form>
+                          
+                </div>
+            </div>
+        </div> 
+    </div>
+
     <script src="js/scripts.js"></script>
 
 </body>

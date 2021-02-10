@@ -1,5 +1,7 @@
+'use strict';
+
 const swiper = new Swiper('.swiper-container', {
-  
+
     loop: true,
   
     pagination: {
@@ -97,3 +99,78 @@ let elemLinkUp = document.querySelector('.why__h2')
 let linkUp = document.querySelector('.link-up')
 
 showName(elemLinkUp, linkUp);
+
+// telegram Bot
+
+function sentInTelegram(){
+  
+  let chatid = "282352564";
+  let token = "1679824814:AAGJMWK8SifDC-mcKfkijCvcnNMAyZHYTSo",
+      messName = document.getElementById("recipientName").value,
+      messPhone = document.getElementById("recipientPhone").value,
+      messMore = document.getElementById("messageText").value;
+      
+      if (messName !== null){
+          if (messName.length < 3){
+              alert("Введите ваше имя");
+              return;
+          }
+      }
+      if (messPhone !== null && messName !== null){
+          if (messPhone.length < 10){
+              alert("Введите ваш телефон");
+              return;
+          }
+      }
+      let text = `Имя: <b>${messName}</b>\nТелефон: <a>${messPhone}</a>`;
+      if (messMore.length >= 1){
+          text = `Имя: <b>${messName}</b>\nТелефон: <a>${messPhone}</a>\nДополнительно: ${messMore}`;
+      }
+      text = encodeURIComponent(text);
+
+      let url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&parse_mode=HTML&text=${text}`;
+      
+    fetch(url);
+      
+    let btnSended = document.getElementById('btnsend');
+    btnSended.innerHTML = 'Ваш запрос отравлен';
+    btnSended.setAttribute("disabled", "disabled");
+    document.getElementById("recipientName").value = '';
+    document.getElementById("recipientPhone").value = '';
+    document.getElementById("messageText").value = '';
+    setTimeout(() => {
+      btnSended.removeAttribute("disabled", "disabled");
+      btnSended.innerHTML = 'Отправить запрос'}, 2000);
+};
+
+// Make animate for about us
+
+let showAboutUs = document.querySelector('.about-us__animate');
+showAboutUs.onclick = function() {
+  console.log(showAboutUs.getBoundingClientRect().bottom)
+}
+let aboutUsL = document.querySelector('.about-us__items--l');
+let aboutUsR = document.querySelector('.about-us__items--r');
+if (showAboutUs.getBoundingClientRect().bottom < 700) {
+    aboutUsL.classList.add('animate__animated');
+    aboutUsL.classList.add('animate__fadeInLeftBig');
+    aboutUsR.classList.add('animate__animated');
+    aboutUsR.classList.add('animate__fadeInRightBig');
+}
+
+// Modal window
+
+const myModal = new HystModal({
+    linkAttributeName: 'data-hystmodal',
+    catchFocus: true,
+    waitTransitions: true,
+    closeOnEsc: true,
+    beforeOpen: function(){
+    let inp = document.getElementById("recipientPhone");
+  
+    inp.addEventListener('keypress', e => {
+        if(!/\d/.test(e.key))
+          e.preventDefault();
+    });
+  }
+});
