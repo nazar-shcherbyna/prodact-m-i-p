@@ -70,6 +70,9 @@ h1 {
     }
     &__little-h {
         z-index: 7;
+        position: fixed;
+        top: 10px;
+        left: 45%;
         font-size: 2.7rem;
         padding: 0;
         margin: 10px 0;
