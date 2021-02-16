@@ -68,9 +68,11 @@ function showName(elem, showElem) {
   document.addEventListener('scroll', function () {
     if (elem.getBoundingClientRect().bottom <= 0) {
       showElem.classList.add('show');
+      document.querySelector('.header__nav').style.backgroundColor = "rgba(0, 0, 0, 0.2)"
     }
     if (elem.getBoundingClientRect().bottom > 0) {
       showElem.classList.remove('show');
+      document.querySelector('.header__nav').style.backgroundColor = "transparent"
     }
   })
 }
@@ -184,3 +186,34 @@ const myModal = new HystModal({
     });
   }
 });
+
+// izotope
+
+window.addEventListener('load', () => {
+  let isoBtn = document.querySelectorAll('.filter__btn');
+  let elem = document.querySelector('.filter__items');
+
+  let iso = new Isotope(elem, {
+    itemSelector: '.filter__item',
+    layoutMode: 'fitRows'
+  });
+
+  isoBtn.forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+
+      isoBtn.forEach(btn => {
+        btn.classList.remove('active')
+      })
+
+      e.target.classList.add('active')
+
+      let filter = e.target.getAttribute('data-filter');
+
+      filter = filter == '*' ? filter : `.${filter}`
+
+      iso.arrange({filter: filter})
+
+    })
+  })
+})
