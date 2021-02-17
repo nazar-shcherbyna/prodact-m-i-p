@@ -147,28 +147,28 @@ function sentInTelegram(){
 
 // Make animate for about us
 
-let showAboutUs = document.querySelector('.about-us__animate');
-let aboutUsL = document.querySelector('.about-us__items--l');
-let aboutUsLL = document.querySelector('.about-us__items--ll');
-let aboutUsR = document.querySelector('.about-us__items--r');
-let aboutUsRR = document.querySelector('.about-us__items--rr');
+// let showAboutUs = document.querySelector('.about-us__animate');
+// let aboutUsL = document.querySelector('.about-us__items--l');
+// let aboutUsLL = document.querySelector('.about-us__items--ll');
+// let aboutUsR = document.querySelector('.about-us__items--r');
+// let aboutUsRR = document.querySelector('.about-us__items--rr');
 
-document.addEventListener('scroll', () => {
-  if (showAboutUs.getBoundingClientRect().bottom < 700) {
-    aboutUsL.classList.add('animate__fadeInLeftBig');
-    aboutUsR.classList.add('animate__fadeInRightBig');
-    setTimeout(() => {
-      aboutUsLL.classList.add('animate__fadeInLeftBig')
-      aboutUsRR.classList.add('animate__fadeInRightBig')
-    }, 500)
-  }
-  if (showAboutUs.getBoundingClientRect().bottom > 700) {
-      aboutUsL.classList.remove('animate__fadeInLeftBig');
-      aboutUsR.classList.remove('animate__fadeInRightBig');
-      aboutUsLL.classList.remove('animate__fadeInLeftBig');
-      aboutUsRR.classList.remove('animate__fadeInRightBig');
-  }
-})
+// document.addEventListener('scroll', () => {
+//   if (showAboutUs.getBoundingClientRect().bottom < 700) {
+//     aboutUsL.classList.add('animate__fadeInLeftBig');
+//     aboutUsR.classList.add('animate__fadeInRightBig');
+//     setTimeout(() => {
+//       aboutUsLL.classList.add('animate__fadeInLeftBig')
+//       aboutUsRR.classList.add('animate__fadeInRightBig')
+//     }, 500)
+//   }
+//   if (showAboutUs.getBoundingClientRect().bottom > 700) {
+//       aboutUsL.classList.remove('animate__fadeInLeftBig');
+//       aboutUsR.classList.remove('animate__fadeInRightBig');
+//       aboutUsLL.classList.remove('animate__fadeInLeftBig');
+//       aboutUsRR.classList.remove('animate__fadeInRightBig');
+//   }
+// })
 
 // Modal window
 

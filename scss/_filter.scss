@@ -1,13 +1,18 @@
 .filter {
     min-height: 100vh;
     background-color: #fff;
-    padding-top: 100px;
+    padding-top: 130px;
+    padding-bottom: 20px;
     h1 {
         text-align: center;
         color: #000;
     }
     ul {
         padding: 0;
+    }
+    li {
+        padding: 0;
+        margin: 0;
     }
     a {
         text-decoration: none;
@@ -21,10 +26,12 @@
         font-size: 0;
     }
     &__item {
-        width: 20%;
+        width: 25%;
         img {
+            padding: 10px;
             width: 100%;
             height: 400px;
+            object-fit: cover;
         }
     }
     &__rozetka {

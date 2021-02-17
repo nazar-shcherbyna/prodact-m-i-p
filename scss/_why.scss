@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .why {
     background-color: #ad746c;
     color: #fff;
@@ -93,6 +95,17 @@
         }
     }
 }
+
+.our-team {
+    @include sth2;
+    max-height: 100vh;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
 
 .swiper-container {
     background-color: #fff;

@@ -5,3 +5,9 @@
         @content;
     }
 }
+
+@mixin sth2 {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
