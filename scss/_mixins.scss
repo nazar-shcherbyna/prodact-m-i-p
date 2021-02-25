@@ -8,6 +8,11 @@
 
 @mixin sth2 {
     font-size: 2.4rem;
-    color: #fff;
+    color: $main-c;
     text-align: center;
+}
+
+@mixin pCenter {
+    display: flex;
+    align-items: center;
 }

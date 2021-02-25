@@ -1,3 +1,5 @@
+@import 'variables';
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -5,7 +7,7 @@
     width: 100%;
     color: #fff;
     padding: 0 30px;
-    background-color: #1b1b1b;
+    background-color: $main-c;
     @media screen and (max-width: 992px) {
         display: block;
         text-align: center;

@@ -15,6 +15,8 @@ const swiper = new Swiper('.swiper-container', {
   
   });
 
+// gMaps
+
 let map;
 
 function initMap() {
@@ -55,52 +57,8 @@ function closeMenu(){
     document.querySelector('.hamburger__btn').click();   
 }
 
-// work with logo-name
-
-let mipName = document.querySelector('.header__h1');
-let mipLittleName = document.querySelector('.header__little-h');
-
-mipName.addEventListener('click', () => {
-  console.log(mipName.getBoundingClientRect().bottom)
-})
-
-function showName(elem, showElem) {
-  document.addEventListener('scroll', function () {
-    if (elem.getBoundingClientRect().bottom <= 0) {
-      showElem.classList.add('show');
-      document.querySelector('.header__nav').style.backgroundColor = "rgba(0, 0, 0, 0.2)"
-    }
-    if (elem.getBoundingClientRect().bottom > 0) {
-      showElem.classList.remove('show');
-      document.querySelector('.header__nav').style.backgroundColor = "transparent"
-    }
-  })
-}
-
-showName(mipName, mipLittleName);
-
-// document.addEventListener('scroll', function showLittleName() {
-//   if (mipName.getBoundingClientRect().bottom <= 20) {
-//     mipLittleName.classList.add('show');
-//   }
-//   if (mipName.getBoundingClientRect().bottom > 20) {
-//     mipLittleName.classList.remove('show');
-//   }
-// })
-
-// document.addEventListener('scroll', function showLittleName() {
-//   if (mipName.getBoundingClientRect().bottom <= 20) {
-//     mipHumName.classList.add('show');
-//   }
-//   if (mipName.getBoundingClientRect().bottom > 20) {
-//     mipHumName.classList.remove('show');
-//   }
-// })
-
 let elemLinkUp = document.querySelector('.why__h2')
 let linkUp = document.querySelector('.link-up')
-
-showName(elemLinkUp, linkUp);
 
 // telegram Bot
 
@@ -189,31 +147,31 @@ const myModal = new HystModal({
 
 // izotope
 
-window.addEventListener('load', () => {
-  let isoBtn = document.querySelectorAll('.filter__btn');
-  let elem = document.querySelector('.filter__items');
+// window.addEventListener('load', () => {
+//   let isoBtn = document.querySelectorAll('.filter__btn');
+//   let elem = document.querySelector('.filter__items');
 
-  let iso = new Isotope(elem, {
-    itemSelector: '.filter__item',
-    layoutMode: 'fitRows'
-  });
+//   let iso = new Isotope(elem, {
+//     itemSelector: '.filter__item',
+//     layoutMode: 'fitRows'
+//   });
 
-  isoBtn.forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
+//   isoBtn.forEach(btn => {
+//     btn.addEventListener('click', e => {
+//       e.preventDefault();
 
-      isoBtn.forEach(btn => {
-        btn.classList.remove('active')
-      })
+//       isoBtn.forEach(btn => {
+//         btn.classList.remove('active')
+//       })
 
-      e.target.classList.add('active')
+//       e.target.classList.add('active')
 
-      let filter = e.target.getAttribute('data-filter');
+//       let filter = e.target.getAttribute('data-filter');
 
-      filter = filter == '*' ? filter : `.${filter}`
+//       filter = filter == '*' ? filter : `.${filter}`
 
-      iso.arrange({filter: filter})
+//       iso.arrange({filter: filter})
 
-    })
-  })
-})
+//     })
+//   })
+// })
