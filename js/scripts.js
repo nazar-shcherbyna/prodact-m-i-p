@@ -72,7 +72,7 @@ function sentInTelegram(){
       
       if (messName !== null){
           if (messName.length < 3){
-              alert("Введите ваше имя");
+            alert('Кать, я замечания усвоил, все доделаю.');
               return;
           }
       }
@@ -82,7 +82,7 @@ function sentInTelegram(){
               return;
           }
       }
-      let text = `Имя: <b>${messName}</b>\nТелефон: <a>${messPhone}</a>`;
+      let text = `Имя: <b>${messName}</b>\nТелефон: <a href='#'>${messPhone}</a>`;
       if (messMore.length >= 1){
           text = `Имя: <b>${messName}</b>\nТелефон: <a>${messPhone}</a>\nДополнительно: ${messMore}`;
       }
@@ -93,6 +93,7 @@ function sentInTelegram(){
     fetch(url);
       
     let btnSended = document.getElementById('btnsend');
+
     btnSended.innerHTML = 'Ваш запрос отравлен';
     btnSended.setAttribute("disabled", "disabled");
     document.getElementById("recipientName").value = '';
