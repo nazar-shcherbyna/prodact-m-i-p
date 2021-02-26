@@ -1,0 +1,33 @@
+@import 'variables';
+
+.history {
+    min-height: 100vh;
+    &__h2 {
+        color: $main-c;
+        font-size: 3.8rem;
+        text-align: center;
+        padding: 100px 0 40px;
+        margin: 0;
+    }
+    &__items {
+        width: 100%;
+        display: flex;
+    }
+    &__img {
+        width: 33%;
+        margin: 0 20px;
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    &__text {
+        font-size: 2.3rem;
+        width: 67%;
+        margin: 0 20px;
+        padding: 0 30px;
+        @media screen and (max-width: 992px) {
+            font-size: 1.8rem;
+        }
+    }
+}
