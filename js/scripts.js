@@ -71,14 +71,14 @@ function sentInTelegram(){
       messMore = document.getElementById("messageText").value;
       
       if (messName !== null){
-          if (messName.length < 3){
-            alert('Кать, я замечания усвоил, все доделаю.');
-              return;
+          if (messName.length < 3) {
+              alert('More');
+            return;
           }
       }
       if (messPhone !== null && messName !== null){
           if (messPhone.length < 10){
-              alert("Введите ваш телефон");
+              alert('Телефон должен быть 10 цыфр')
               return;
           }
       }
@@ -96,12 +96,14 @@ function sentInTelegram(){
 
     btnSended.innerHTML = 'Ваш запрос отравлен';
     btnSended.setAttribute("disabled", "disabled");
+    btnSended.style.backgroundColor = '#484c53';
     document.getElementById("recipientName").value = '';
     document.getElementById("recipientPhone").value = '';
     document.getElementById("messageText").value = '';
     setTimeout(() => {
       btnSended.removeAttribute("disabled", "disabled");
-      btnSended.innerHTML = 'Отправить запрос'}, 2000);
+      btnSended.style.backgroundColor = '#3E4095';
+      btnSended.innerHTML = 'Отправить запрос'}, 3000);
 };
 
 // Make animate for about us
@@ -143,6 +145,7 @@ const myModal = new HystModal({
         if(!/\d/.test(e.key))
           e.preventDefault();
     });
+
   }
 });
 
