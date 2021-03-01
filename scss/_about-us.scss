@@ -3,7 +3,7 @@
 .about-us {
     min-height: 100vh;
     overflow: hidden;
-    background: rgba(239, 240, 235, 0.82);
+    background: $grey-section-bgc;
     &__h2 {
         font-size: 4rem;
         width: 100%;
