@@ -74,24 +74,4 @@
             padding: 10px 5px 10px 10px;
         }
     }
-    &__our-toys {
-        position: relative;
-    }
-    &__h2--position {
-        margin: 0;
-        position: absolute;
-        left: 10%;
-        width: 80%;
-        font-size: 3.8rem;
-        border-radius: 10px;
-        color: #000;
-        background-color: #fff;
-        top: -40px;
-        z-index: 2;
-        @media screen and (max-width: 576px) {
-            font-size: 2.8rem;
-            padding: 50px 0 0;
-            top: -20px;
-        }
-    }
 }

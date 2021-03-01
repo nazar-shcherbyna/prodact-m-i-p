@@ -40,7 +40,7 @@ h1 {
 
 .header {
     background: url('../img/ФОН.jpg') 0 0/cover no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     &__nav {
         position: fixed;
         z-index: 15;
