@@ -8,17 +8,34 @@
         text-align: center;
         padding: 100px 0 40px;
         margin: 0;
+        @media screen and (max-width: 576px) {
+            padding: 50px 0 20px;
+            font-size: 2.8rem;
+        }
     }
     &__items {
         width: 100%;
         display: flex;
+        @media screen and (max-width: 576px) {
+            flex-wrap: wrap;
+        }
     }
     &__img {
         width: 33%;
         margin: 0 20px;
+        @media screen and (max-width: 576px) {
+            width: 80%;
+            margin: 0 auto;
+            max-height: 400px;
+            overflow: hidden;
+        }
         img {
             width: 100%;
             border-radius: 10px;
+            @media screen and (max-width: 576px) {
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
     &__text {
@@ -27,7 +44,18 @@
         margin: 0 20px;
         padding: 0 30px;
         @media screen and (max-width: 992px) {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+            padding: 0;
+        }
+        @media screen and (max-width: 768px) {
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 576px) {
+            // text-align: center;
+            margin: 20px auto 0;
+        }
+        p {
+            margin: 0 0 20px;
         }
     }
 }
@@ -40,6 +68,12 @@
     display: flex;
     width: 60%;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 576px) {
+        width: 90%;
+    }
 }
 
 .swiper__item {
@@ -51,6 +85,9 @@
 .swiper-container {
     width: 100%;
     padding: 50px 0;
+    @media screen and (max-width: 576px) {
+        padding: 10px 0 30px;
+    }
 }
 
 .swiper-img {
@@ -76,10 +113,7 @@
 }
 
 .swiper-pagination-bullet {
-    background-color: #fff;
+    background-color: $text-color;
     width: 10px;
     height: 10px;
-    @media screen and (max-width: 576px) {
-        background-color: #fff;
-    }
 }

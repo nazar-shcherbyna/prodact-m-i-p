@@ -4,6 +4,9 @@
     min-height: 100vh;
     overflow: hidden;
     background: $grey-section-bgc;
+    @media screen and (max-width: 768px) {
+        padding-bottom: 50px;
+    }
     &__h2 {
         font-size: 4rem;
         width: 100%;
@@ -11,10 +14,15 @@
         margin: 0;
         color: $main-c;
         padding: 80px 0 30px;
+        @media screen and (max-width: 992px) {
+            padding: 80px 0 50px;
+            font-size: 3.4rem;
+        }
     }
     &__items {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     &__item {
         width: calc(33.33% - 30px * 2);
@@ -25,14 +33,19 @@
         border-radius: 10px;
         transition: all .3s ease;
         background-color: #fff;
+        @media screen and (max-width: 992px) {
+            width: calc(33.33% - 10px * 2);
+            margin: 0 10px;
+            padding: 15px;
+        }
         @media screen and (max-width: 768px) {
-            margin: 15px;
-            padding: 20px;
-            width: calc(50% - 15px * 2);
+            padding: 10px;
+            margin: 0 5px;
+            width: calc(33.33% - 5px * 2);
         }
         @media screen and (max-width: 576px) {
-            padding: 20px;
             width: 100%;
+            margin: 10px 30px;
         }
         &:hover {
             transform: scale(1.01);
@@ -43,15 +56,15 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin: 40px 0 20px;
+            color: $text-color;
             @media screen and (max-width: 992px) {
-                font-size: 2.2rem;
+                margin: 20px 0 10px;
             }
             @media screen and (max-width: 768px) {
-                font-size: 2rem;
-                margin: 20px;
+                margin: 5px;
             }
             @media screen and (max-width: 576px) {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 margin: 10px;
             }
         }
@@ -59,13 +72,14 @@
             font-size: 1.8rem;
             font-weight: 400;
             @media screen and (max-width: 992px) {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             @media screen and (max-width: 768px) {
                 font-size: 1.7rem;
             }
             @media screen and (max-width: 576px) {
                 font-size: 1.6rem;
+                display: none;
             }
         }
     }
@@ -73,14 +87,13 @@
         margin: 70px auto 20px;
         @media screen and (max-width: 992px) {
             padding: 15px;
+            margin: 30px auto 10px;
         }
         svg {
             width: 75px;
             height: 75px;
             fill: $main-c;
             @media screen and (max-width: 992px) {
-                width: 100px;
-                height: 100px;
             }
         }
     }
